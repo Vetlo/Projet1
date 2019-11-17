@@ -8,7 +8,6 @@ ScriptsOnlyBuild:
     - Project.Player.PlayerManager
     UnityEditor.TestRunner.dll:
     - UnityEditor.TestTools.TestRunner.Api.CallbacksHolder
-    - UnityEditor.TestTools.TestRunner.TestListCacheData
   sceneClasses:
     Assets/Scenes/Scene1.unity:
     - Class: 1
@@ -38,15 +37,15 @@ ScriptsOnlyBuild:
     - Class: 108
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 10568}
+      Script: {instanceID: 9702}
     - Class: 114
-      Script: {instanceID: 12522}
+      Script: {instanceID: 9828}
     - Class: 114
-      Script: {instanceID: 12546}
+      Script: {instanceID: 9984}
     - Class: 114
-      Script: {instanceID: 12552}
+      Script: {instanceID: 10576}
     - Class: 114
-      Script: {instanceID: 13006}
+      Script: {instanceID: 10796}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 143
@@ -74,6 +73,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.TextMeshPro.dll
     namespaceName: TMPro
     className: TMP_SelectionCaret
+  - hash:
+      serializedVersion: 2
+      Hash: ef9cda6eb8c11eae07bf1e9785e22ecb
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: MouseLook
   - hash:
       serializedVersion: 2
       Hash: 87ff43d2baf3385cba327d8f803a4ebb
@@ -104,6 +109,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
     className: ActivationTrack
+  - hash:
+      serializedVersion: 2
+      Hash: 636cfdeefa58c2101456da74e3797ea7
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: Project.Player
+    className: PlayerManager
   - hash:
       serializedVersion: 2
       Hash: 72712369a7c681ad84fc255a5ec0b333
@@ -152,6 +163,12 @@ ScriptsOnlyBuild:
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
     className: GridLayoutGroup
+  - hash:
+      serializedVersion: 2
+      Hash: d8803e115a803da963c73938102dec28
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: Project.Networking
+    className: NetworkTransform
   - hash:
       serializedVersion: 2
       Hash: 8aa3d6ccbcb54ee8db6c1229854adaaa
@@ -314,6 +331,12 @@ ScriptsOnlyBuild:
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
     className: VerticalLayoutGroup
+  - hash:
+      serializedVersion: 2
+      Hash: 5e02bf9bb3005dde8e8fb55e9cb275eb
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: Project.Networking
+    className: NetworkIdentity
   - hash:
       serializedVersion: 2
       Hash: 783f593b9380cf72d0f7ebfd4a0d4bcd
@@ -494,30 +517,6 @@ ScriptsOnlyBuild:
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
     className: PlayableTrack
-  - hash:
-      serializedVersion: 2
-      Hash: 636cfdeefa58c2101456da74e3797ea7
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: Project.Player
-    className: PlayerManager
-  - hash:
-      serializedVersion: 2
-      Hash: 5e02bf9bb3005dde8e8fb55e9cb275eb
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: Project.Networking
-    className: NetworkIdentity
-  - hash:
-      serializedVersion: 2
-      Hash: d8803e115a803da963c73938102dec28
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: Project.Networking
-    className: NetworkTransform
-  - hash:
-      serializedVersion: 2
-      Hash: ef9cda6eb8c11eae07bf1e9785e22ecb
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: MouseLook
   platform: 5
   scenePathNames:
   - Assets/Scenes/Scene1.unity
