@@ -67,6 +67,7 @@ namespace Project.Networking {
             player.position.x = Mathf.Round(transform.position.x * 1000.0f) / 1000.0f;
             player.position.y = Mathf.Round(transform.position.y * 1000.0f) / 1000.0f;
             player.position.z = Mathf.Round(transform.position.z * 1000.0f) / 1000.0f;
+            player.position.OnBeforeSerialize();
             var socket = networkIdentity.GetSocket();
             socket.Emit("updatePosition" , new JSONObject(JsonUtility.ToJson(player)));
         }
