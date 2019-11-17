@@ -24,11 +24,15 @@ public class MouseLook : MonoBehaviour {
     {
         if (NetworkIdentity.IsControlling())
         {
-            checkCamera();
+            CheckCamera();
+        }
+        else
+        {
+            this.transform.gameObject.SetActive(false);
         }
     }
 
-    private void checkCamera()
+    private void CheckCamera()
     {
         float mouseX = Input.GetAxis("Mouse X") * mouseSensitivity * Time.deltaTime;
         float mouseY = Input.GetAxis("Mouse Y") * mouseSensitivity * Time.deltaTime;

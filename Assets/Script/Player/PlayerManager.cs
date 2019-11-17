@@ -30,11 +30,11 @@ namespace Project.Player{
             
             if (NetworkIdentity.IsControlling())
             {
-                checkMovement();
+                CheckMovement();
             }
         }
 
-        private void checkMovement()
+        private void CheckMovement()
         {
             
 

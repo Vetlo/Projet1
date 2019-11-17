@@ -13,7 +13,9 @@ namespace Project.Networking {
         [GreyOut]
         private Vector3 oldPosition;
 
+        
         private NetworkIdentity networkIdentity;
+        
         private Player player;
 
         private float stillCounter = 0;
@@ -44,7 +46,7 @@ namespace Project.Networking {
                 {
                     oldPosition = transform.position;
                     stillCounter = 0;
-                    sendData();
+                    SendData();
                 }
                 else
                 {
@@ -53,20 +55,20 @@ namespace Project.Networking {
                     if(stillCounter >= 1)
                     {
                         stillCounter = 0;
-                        sendData();
+                        SendData();
                     }
                 }
             }
         }
 
 
-        private void sendData()
+        private void SendData()
         {
             player.position.x = Mathf.Round(transform.position.x * 1000.0f) / 1000.0f;
             player.position.y = Mathf.Round(transform.position.y * 1000.0f) / 1000.0f;
             player.position.z = Mathf.Round(transform.position.z * 1000.0f) / 1000.0f;
             var socket = networkIdentity.GetSocket();
-            socket.Emit("updatePosition" , JSONObject.CreateStringObject(JsonUtility.ToJson(player))) ;
+            socket.Emit("updatePosition" , new JSONObject(JsonUtility.ToJson(player)));
         }
 
     }

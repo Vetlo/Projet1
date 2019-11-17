@@ -50,8 +50,8 @@ namespace SocketIO
 		public float pingInterval = 25f;
 		public float pingTimeout = 60f;
 
-		public WebSocket socket { get { return ws; } }
-		public string sid { get; set; }
+		public WebSocket Socket { get { return ws; } }
+		public string Sid { get; set; }
 		public bool IsConnected { get { return connected; } }
 
 		#endregion
@@ -97,7 +97,7 @@ namespace SocketIO
 			parser = new Parser();
 			handlers = new Dictionary<string, List<Action<SocketIOEvent>>>();
 			ackList = new List<Ack>();
-			sid = null;
+			Sid = null;
 			packetId = 0;
 
 			ws = new WebSocket(url);
@@ -341,7 +341,7 @@ namespace SocketIO
 			#if SOCKET_IO_DEBUG
 			debugMethod.Invoke("[SocketIO] Socket.IO sid: " + packet.json["sid"].str);
 			#endif
-			sid = packet.json["sid"].str;
+			Sid = packet.json["sid"].str;
 			EmitEvent("open");
 		}
 

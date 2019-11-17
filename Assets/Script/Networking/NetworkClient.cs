@@ -1,7 +1,5 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using UnityEngine;
-using SocketIO;
 using Project.Utility;
 using System;
 
@@ -25,8 +23,8 @@ namespace Project.Networking
         public override void Start()
         {
             base.Start();
-            initialize();
-            setupEvents();
+            Initialize();
+            SetupEvents();
         }
 
         // Update is called once per frame
@@ -35,11 +33,11 @@ namespace Project.Networking
             base.Update();
         }
 
-        private void initialize()
+        private void Initialize()
         {
             serverObjects = new Dictionary<string, NetworkIdentity>();
         }
-        private void setupEvents()
+        private void SetupEvents()
         {
             On("open", (E) =>
             {
@@ -76,6 +74,7 @@ namespace Project.Networking
 
             On("updatePosition", (E) =>
             {
+                Debug.Log("received packet");
                 string id = E.data["id"].ToString().RemoveQuotes();
                 float x = E.data["position"]["x"].f;
                 float y = E.data["position"]["y"].f;
@@ -88,13 +87,14 @@ namespace Project.Networking
         }
     }
 
-    [Serializable]
-    public class Player{
+    [System.Serializable]
+    public class Player
+    {
         public string id;
         public Position position;
     }
 
-    [Serializable]
+    [System.Serializable]
     public class Position
     {
         public float x;
